@@ -1,0 +1,101 @@
+@use "../common/mixin.scss" as *;
+
+.wave {
+  @include position(fixed, null, null, 0, 0);
+  width: 600%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+
+  @media screen and (min-width: 768px) {
+    width: 600%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 200%;
+  }
+
+  &-top {
+    background-size: 50% 100px;
+    background-image: url("../../assets/images/first-wave.png");
+
+    @at-root :global(.dark) & {
+      background-image: url("../../assets/images/first-wave-black.png");
+    }
+
+    @at-root .wave-animation & {
+      animation: move-wave 3s;
+      animation-delay: 1s;
+    }
+  }
+
+  &-middle {
+    background-size: 50% 120px;
+    background-image: url("../../assets/images/second-wave.png");
+
+    @at-root :global(.dark) & {
+      background-image: url("../../assets/images/second-wave-black.png");
+    }
+
+    @at-root .wave-animation & {
+      animation: move_wave 10s linear infinite;
+    }
+  }
+
+  &-bottom {
+    background-size: 50% 100px;
+    background-image: url("../../assets/images/third-wave.png");
+
+    @at-root :global(.dark) & {
+      background-image: url("../../assets/images/third-wave-black.png");
+    }
+
+    @at-root .wave-animation & {
+      animation: move_wave 15s linear infinite;
+    }
+  }
+
+  &-wrapper {
+    overflow: hidden;
+    @include position(absolute, null, 0, 0, 0);
+    height: 200px;
+
+    &-inner {
+      @include position(absolute, null, null, -1, null);
+      width: 100%;
+      overflow: hidden;
+      height: 200px;
+    }
+  }
+}
+
+.bg {
+  &-top {
+    z-index: 15;
+    opacity: 0.5;
+  }
+
+  &-middle {
+    z-index: 10;
+    opacity: .75;
+  }
+
+  &-bottom {
+    z-index: 5;
+  }
+}
+
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(.55);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}

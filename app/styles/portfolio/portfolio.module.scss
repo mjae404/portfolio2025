@@ -1,0 +1,135 @@
+@use "../common/mixin.scss" as *;
+
+.portfolio {
+  &-section {
+    margin: 50px 0;
+  }
+
+  &-detail-title {
+    margin: 0 0 20px 0;
+    padding-right: 15px;
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    display: inline;
+    font-size: 32px;
+
+    &::after {
+      @include position(absolute, null, -5px, 7px, null);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: var(--point-color);
+      content: '';
+    }
+
+    @media screen and (min-width: 586px) {
+      display: inline-block;
+
+      &::after {
+        bottom: 10px;
+      }
+    }
+  }
+
+  &-summary {
+    &-container {
+      margin-bottom: 50px;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
+
+      picture {
+        flex: 1;
+      }
+    }
+
+    &-text-container {
+      margin-top: 20px;
+
+      @media screen and (min-width: 768px) {
+        width: 40%;
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+
+  &-info {
+    &-list {
+      margin: 0 0 20px 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+
+    &-title {
+      font-family: Pretendard-Bold, sans-serif;
+    }
+
+    &-desc {
+      margin: 0 0 0 10px;
+      padding: 0;
+    }
+
+    &-stack {
+      width: 100%;
+    }
+  }
+
+  &-desc {
+    margin: 0;
+  }
+
+  &-link {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: var(--fill);
+    position: relative;
+    margin-top: 20px;
+    border: 1px solid var(--fill);
+    padding: 8px 20px;
+    transition: all .3s;
+    border-radius: 50px;
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--fill);
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid var(--border);
+    vertical-align: top;
+
+    &-detail {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      vertical-align: top;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &-container {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

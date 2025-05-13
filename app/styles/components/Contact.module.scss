@@ -1,0 +1,72 @@
+@use "../common/mixin.scss" as *;
+
+.contact {
+  &-area {
+    @media screen and (min-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      align-items: center;
+    }
+
+    &::before {
+      display: none;
+      width: 400px;
+      height: 400px;
+      @include position (absolute, null, 0, 50px, null);
+      background: url("../../assets/images/contact-background.png") no-repeat right bottom / contain;
+      content: '';
+
+      @media screen and (min-width: 992px) {
+        display: block;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 32px;
+    margin: 0 0 30px 0;
+    line-height: 1;
+    color: var(--text);
+    border-bottom: 7px solid var(--fill);
+    text-transform: uppercase;
+
+    @media screen and (min-width: 576px) {
+      margin: 0 0 30px 0;
+    }
+
+    @media screen and (min-width: 992px) {
+      font-size: 44px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 576px) {
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  &-mail {
+    color: var(--point-color);
+    border-bottom: 1px dashed var(--point-color);
+    font-family: Pretendard-Bold, sans-serif;
+    font-style: italic;
+    text-decoration: none;
+    transition: all .4s;
+
+    &:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    &-text {
+      font-size: 20px;
+    }
+  }
+}

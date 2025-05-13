@@ -1,0 +1,41 @@
+@use "../common/mixin.scss" as *;
+
+.go-home {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid var(--fill);
+  padding: 5px 15px;
+  font-size: 12px;
+  position: relative;
+  vertical-align: middle;
+
+  &::before {
+    @include position(absolute, 50%, null, nulil, 20px);
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url("../../assets/icons/icon-arrow-back.svg") no-repeat center / contain;
+    display: none;
+    content: '';
+
+    @at-root :global(.dark) & {
+      background-image: url("../../assets/icons/icon-arrow-back-white.svg");
+    }
+  }
+
+  &-container {
+    justify-content: flex-end;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 10px 20px 10px 50px;
+    box-sizing: border-box;
+
+    &::before {
+      display: block;
+    }
+  }
+}

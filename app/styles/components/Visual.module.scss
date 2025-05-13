@@ -1,0 +1,243 @@
+@use "../common/mixin.scss" as *;
+
+.visual {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/images/visual-image.jpg") no-repeat center center / cover;
+  transition: all .5s ease 0s;
+
+  &-text {
+    @include position(absolute, 50%, null, null, 50%);
+    transform: translate(-50%, -50%);
+    color: var(--pointer-color);
+    font-size: 50px;
+    font-weight: 900;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 10s infinite linear;
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    @include position(absolute, 0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, .7);
+    content: '';
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20vmin 0vmin #000 inset, 0 0 3vmin .5vmin #000 inset, 0 0 1vmin 1vmin #000;
+  }
+
+  &-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background: #222;
+    perspective: 100vmin;
+  }
+}
+
+.film, .effect {
+  width: 100%;
+  height: 100%;
+  filter: blur(0.45px) drop-shadow(0px 0px 0px #fff1);
+
+  &::after {
+    @include position(absolute, 0, null, null, 0);
+    width: 120%;
+    height: 100%;
+    padding-left: 100px;
+    opacity: 0.5;
+    animation: film-scratch 1s steps(1) infinite;
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .1) 0 2px, transparent 4px 37vmin);
+    content: '';
+  }
+}
+
+.film {
+  position: relative;
+}
+
+.effect::after {
+  position: absolute;
+  left: 30%;
+  animation: effect-scratch 2s infinite;
+}
+
+.grain {
+  width: 100%;
+  height: 100%;
+
+  &:after {
+    @include position(absolute, -5%, null, null, 0%);
+    width: 110%;
+    height: 110%;
+    opacity: .25;
+    background-image:
+        repeating-conic-gradient(#000 0%, transparent .00003%, transparent .0002%, transparent .00005%),
+        repeating-conic-gradient(#000 0%, transparent .00005%, transparent .00015%, transparent .0009%);
+    animation: grain 0.5s steps(1) infinite;
+    filter: drop-shadow(0px 0px 1px #fff);
+    content: '';
+  }
+}
+
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-1%, -1%);
+  }
+
+  20% {
+    transform: translate(1%, 1%);
+  }
+
+  30% {
+    transform: translate(-2%, -2%);
+  }
+
+  40% {
+    transform: translate(3%, 3%);
+  }
+
+  50% {
+    transform: translate(-3%, -3%);
+  }
+
+  60% {
+    transform: translate(4%, 4%);
+  }
+
+  70% {
+    transform: translate(-4%, -4%);
+  }
+
+  80% {
+    transform: translate(2%, 2%);
+  }
+
+  90% {
+    transform: translate(-3%, -3%);
+  }
+}
+
+@keyframes film-scratch {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: .5;
+  }
+
+  10% {
+    transform: translateX(-1%);
+  }
+
+  20% {
+    transform: translateX(1%);
+  }
+
+  30% {
+    transform: translateX(-2%);
+    opacity: .75;
+  }
+
+  40% {
+    transform: translateX(3%);
+  }
+
+  50% {
+    transform: translateX(-3%);
+    opacity: .5;
+  }
+
+  60% {
+    transform: translateX(8%);
+  }
+
+  70% {
+    transform: translateX(-3%);
+  }
+
+  80% {
+    transform: translateX(10%);
+    opacity: .25;
+  }
+
+  90% {
+    transform: translateX(-2%);
+  }
+}
+
+@keyframes effect-scratch {
+  0% {
+    transform: translateX(0);
+    opacity: .75;
+  }
+
+  10% {
+    transform: translateX(-1%);
+  }
+
+  20% {
+    transform: translateX(1%);
+  }
+
+  30% {
+    transform: translateX(-2%);
+  }
+
+  40% {
+    transform: translateX(3%);
+  }
+
+  50% {
+    transform: translateX(-3%);
+    opacity: .5;
+  }
+
+  60% {
+    transform: translateX(8%);
+  }
+
+  70% {
+    transform: translateX(-3%);
+  }
+
+  80% {
+    transform: translateX(10%);
+    opacity: .25;
+  }
+
+  90% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}

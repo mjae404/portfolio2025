@@ -1,0 +1,52 @@
+@use "@/app/styles/common/mixin.scss" as *;
+
+.main {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &.sub-page {
+    margin-top: 100px;
+  }
+}
+
+.section {
+  padding: 100px 0;
+  width: 100%;
+
+  &-title {
+    font-family: Inter, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    display: inline;
+    font-size: 32px;
+
+    &::after {
+      @include position(absolute, null, -20px, 5px, null);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: var(--point-color);
+      content: '';
+    }
+
+    @media screen and (min-width: 586px) {
+      padding-right: 15px;
+      margin: 0 0 20px 0;
+      display: inline-block;
+      font-size: 48px;
+
+      &::after {
+        @include position(absolute, null, -5px, 15px, null);
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../common/mixin.scss" as *;
+
+.about {
+  &-info {
+    &-item {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-title {
+      @include position(absolute, 0, null, null, 0);
+      max-width: 80px;
+      border-bottom: 1px solid var(--text);
+      display: inline-block;
+      font-family: Inter, Pretendard-Regular, sans-serif;
+    }
+
+    &-desc {
+      padding-left: 100px;
+      box-sizing: border-box;
+      position: relative;
+      margin: 0;
+
+      &-name {
+        font-family: Pretendard-Regular, sans-serif;
+        font-weight: 400;
+      }
+
+      &::before {
+        @include position(absolute, 12px, null, null, 80px);
+        width: 10px;
+        height: 1px;
+        background-color: var(--text);
+        content: '';
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+
+      &-details {
+        margin-left: 5px;
+        color: var(--border);
+      }
+    }
+  }
+}

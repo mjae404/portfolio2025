@@ -1,0 +1,104 @@
+@use "@/app/styles/common/mixin.scss" as *;
+
+.about {
+  &-container {
+    @media screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: 100px;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    vertical-align: top;
+
+    @media screen and (min-width: 992px) {
+      height: auto;
+    }
+
+    &-container {
+      position: relative;
+      width: calc(100% - 20px);
+      margin-bottom: 70px;
+
+      @media screen and (min-width: 992px) {
+        width: 100%;
+        flex: 1;
+        margin-bottom: 0;
+      }
+
+      &::after {
+        border: 2px solid var(--fill);
+        @include position(absolute, null, -20px, -20px, null);
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        content: '';
+
+        @media screen and (min-width: 1200px) {
+          right: -40px;
+          bottom: -30px;
+        }
+      }
+    }
+  }
+
+  &-text {
+    &-container {
+      flex: 1;
+    }
+
+    &-title {
+      font-size: 24px;
+      position: relative;
+      font-family: Pretendard-Bold, sans-serif;
+      font-style: italic;
+      border-bottom: 5px solid var(--fill);
+    }
+
+    &-description {
+      margin: 20px 0;
+      word-break: keep-all;
+    }
+  }
+
+  &-stack {
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      display: flex;
+    }
+
+    &-item {
+      padding: 3px 15px;
+      border: 1px dashed  var(--fill);
+      border-radius: 50px;
+      text-transform: uppercase;
+      box-sizing: border-box;
+
+      &:not(:last-child) {
+        margin: 10px 10px 0 0;
+      }
+
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &-info-list {
+    margin: 50px 0 0 0;
+    padding: 50px 0 0 0;
+    box-sizing: border-box;
+    border-top: 1px dashed var(--text);
+  }
+}
