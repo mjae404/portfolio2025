@@ -5,6 +5,12 @@ import Footer from "@/app/components/Footer";
 import ClientContainer from "@/app/components/ClientContainer";
 import GoTop from "@/app/components/GoTop";
 import ChangeMode from "@/app/components/ChangeMode";
+import { Inter } from "next/font/google";
+
+const InterSans = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Minjee Kim's Portfolio",
@@ -18,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className={InterSans.variable}>
         <Header />
         <ClientContainer>
           {children}
