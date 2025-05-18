@@ -18,7 +18,7 @@ export default function XeBoard() {
       percentage="100%"
       stack="HTML, CSS, SCSS, jQuery"
       description="※ 현재 배포(마스터 브랜치)된 게시판은 리뉴얼 전 게시판이며 리뉴얼된 코드는 develop 브랜치에 있습니다."
-      link="https://github.com/xpressengine/plugin-board/tree/develo"
+      link="https://github.com/xpressengine/plugin-board/tree/develop"
       detailImages={[
         {
           webp: workDetailXeBoardWebp,
