@@ -60,9 +60,15 @@
     overflow: hidden;
     @include position(absolute, null, 0, 0, 0);
     height: 200px;
+    display: none;
+
+    @media screen and (min-width: 576px) {
+      display: block;
+    }
+
 
     &-inner {
-      @include position(absolute, null, null, -1, null);
+      @include position(absolute, null, null, -1px, null);
       width: 100%;
       overflow: hidden;
       height: 200px;
