@@ -13,6 +13,8 @@ import gulp from "@/app/assets/icons/stack/icon-gulp.svg";
 import jira from "@/app/assets/icons/stack/icon-jira.svg";
 import confluence from "@/app/assets/icons/stack/icon-confluence.svg";
 
+import workWaveClinicWebp from "@/app/assets/images/portfolios/waveclinic.webp";
+import workWaveClinicJpg from "@/app/assets/images/portfolios/waveclinic.jpg";
 import workWeddingWebp from "@/app/assets/images/portfolios/wedding.webp";
 import workWeddingJpg from "@/app/assets/images/portfolios/wedding.jpg";
 import workPortfolio2024Webp from "@/app/assets/images/portfolios/portfolio2024.webp";
@@ -190,6 +192,16 @@ const stackList = [
 ];
 
 const workList = [
+  {
+    id: "workWaveClinic",
+    title: "웨이브 언어 클리닉",
+    term: "2025.08",
+    contribution: "100%",
+    thumbnailWebp: workWaveClinicWebp,
+    thumbnailJpg: workWaveClinicJpg,
+    description: "WAVE 언어 클리닉은 맞춤형 언어치료 프로그램을 제공하는 언어 치료 클리닉입니다. 리액트 환경에서 퍼블리싱 작업하였으며, 외주작업하였습니다.",
+    link: "/portfolio/waveclinic"
+  },
   {
     id: "workWedding",
     title: "모바일 웨딩 청첩장",
