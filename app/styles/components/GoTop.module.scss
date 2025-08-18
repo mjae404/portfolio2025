@@ -14,7 +14,7 @@
   cursor: pointer;
 
   &-container {
-    @include position(fixed, null, 30px, 90px, null);
+    @include position(fixed, null, 30px, 150px, null);
     z-index: 10;
     display: none;
 

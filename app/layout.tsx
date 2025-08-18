@@ -6,6 +6,7 @@ import ClientContainer from "@/app/components/ClientContainer";
 import GoTop from "@/app/components/GoTop";
 import ChangeMode from "@/app/components/ChangeMode";
 import { Inter } from "next/font/google";
+import Github from "@/app/components/Github";
 
 const InterSans = Inter({
   variable: "--font-inter",
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
         </ClientContainer>
         <GoTop />
+        <Github />
         <ChangeMode />
         <Footer />
       </body>
