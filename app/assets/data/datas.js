@@ -23,8 +23,6 @@ import workPortfolio2022Webp from "@/app/assets/images/portfolios/portfolio2022.
 import workPortfolio2022Jpg from "@/app/assets/images/portfolios/portfolio2022.jpg";
 import workPortfolio2021Webp from "@/app/assets/images/portfolios/portfolio2021.webp";
 import workPortfolio2021Jpg from "@/app/assets/images/portfolios/portfolio2021.jpg";
-import workTasonWebp from "@/app/assets/images/portfolios/tason.webp";
-import workTasonJpg from "@/app/assets/images/portfolios/tason.jpg";
 import workMarkupGuideWebp from "@/app/assets/images/portfolios/markup_guide.webp";
 import workMarkupGuideJpg from "@/app/assets/images/portfolios/markup_guide.jpg";
 import workHumusOnWebp from "@/app/assets/images/portfolios/humuson.webp";
@@ -221,16 +219,6 @@ const workList = [
     thumbnailJpg: workPortfolio2024Jpg,
     description: "개인 포트폴리오 사이트 2024년 버전입니다.",
     link: "/portfolio/portfolio2024"
-  },
-  {
-    id: "workTasOn",
-    title: "타스온 소개 페이지 리뉴얼",
-    term: "2023.07",
-    contribution: "100%",
-    thumbnailWebp: workTasonWebp,
-    thumbnailJpg: workTasonJpg,
-    description: "타스온 메인 페이지를 포함하여 소개 페이지 리뉴얼되어 리액트 환경에서 퍼블리싱 작업을 진행했습니다.",
-    link: "/portfolio/tason"
   },
   {
     id: "workPortfolio2023",
