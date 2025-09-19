@@ -4,6 +4,7 @@
   --text: #222;
   --point-color: #f35626;
   --border: #ccc;
+  --gray: #999;
   --fill: #222;
 }
 
@@ -11,9 +12,10 @@
   :root {
     --background: #222;
     --white: #222;
-    --text: #efefef;
+    --text: #f9f9f9;
     --point-color: #ffae00;
     --border: #999;
+    --gray: #999;
     --fill: #fff;
   }
 }
@@ -41,15 +43,17 @@ body {
     --text: #222;
     --point-color: #f35626;
     --border: #ccc;
+    --gray: #999;
     --fill: #222;
   }
 
   &.dark {
     --background: #222;
     --white: #222;
-    --text: #efefef;
+    --text: #f9f9f9;
     --point-color: #ffae00;
     --border: #999;
+    --gray: #999;
     --fill: #fff;
   }
 }
