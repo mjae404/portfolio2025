@@ -68,7 +68,7 @@ const aboutList = [
     items: [
       {
         id: "careerItem01",
-        title: "TmaxCloud - CL연구2본부 CL2-2-2팀 UX 매니저",
+        title: "TmaxCloud - CL2-2-2팀 UX 매니저",
         description: "2024.06 - 2024.10",
       },
       {
@@ -85,6 +85,11 @@ const aboutList = [
         id: "careerItem04",
         title: "엑스이허브 - UI개발팀 퍼블리셔",
         description: "2020.03 - 2021.01",
+      },
+      {
+        id: "careerItem05",
+        title: "개인사업자 - 디자이너 / 퍼블리셔",
+        description: "2018.02 - 2019.12",
       },
     ],
   },
