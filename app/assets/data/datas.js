@@ -25,8 +25,6 @@ import workPortfolio2021Webp from "@/app/assets/images/portfolios/portfolio2021.
 import workPortfolio2021Jpg from "@/app/assets/images/portfolios/portfolio2021.jpg";
 import workMarkupGuideWebp from "@/app/assets/images/portfolios/markup_guide.webp";
 import workMarkupGuideJpg from "@/app/assets/images/portfolios/markup_guide.jpg";
-import workHumusOnWebp from "@/app/assets/images/portfolios/humuson.webp";
-import workHumusOnJpg from "@/app/assets/images/portfolios/humuson.jpg";
 import workTargetMarketingWebp from "@/app/assets/images/portfolios/targetmarketing.webp";
 import workTargetMarketingJpg from "@/app/assets/images/portfolios/targetmarketing.jpg";
 import workXeBoardWebp from "@/app/assets/images/portfolios/xe01.webp";
@@ -35,8 +33,6 @@ import workTonyryuWebp from "@/app/assets/images/portfolios/tonyryu01.webp";
 import workTonyryuJpg from "@/app/assets/images/portfolios/tonyryu01.jpg";
 import workUniuniWebp from "@/app/assets/images/portfolios/uniuni.webp";
 import workUniuniJpg from "@/app/assets/images/portfolios/uniuni.jpg";
-import workKyobobookWebp from "@/app/assets/images/portfolios/kyobo.webp";
-import workKyobobookJpg from "@/app/assets/images/portfolios/kyobo.jpg";
 
 const headerMenu = [
   {
@@ -241,16 +237,6 @@ const workList = [
     link: "/portfolio/markup-guide"
   },
   {
-    id: "workHumusOn",
-    title: "휴머스온",
-    term: "2023.03",
-    contribution: "100%",
-    thumbnailWebp: workHumusOnWebp,
-    thumbnailJpg: workHumusOnJpg,
-    description: "워드프레스로 제작되어 있던 사이트를 리액트 환경으로 세팅하여 퍼블리싱 작업 및 간단한 프론트 개발 업무를 진행하였습니다.",
-    link: "/portfolio/humuson"
-  },
-  {
     id: "workTargetMarketingSolution",
     title: "타겟 마케팅 솔루션",
     term: "2023.02",
@@ -259,16 +245,6 @@ const workList = [
     thumbnailJpg: workTargetMarketingJpg,
     description: "SKT 데이터 마케팅 자동화 관련 사이트입니다. 리액트 환경에서 퍼블리싱 작업 및 간단한 프론트 개발 업무를 진행하였습니다.",
     link: "/portfolio/target-marketing-solution"
-  },
-  {
-    id: "workKyobobook",
-    title: "교보문고 신입사원 부트캠프 과제",
-    term: "2022.09",
-    contribution: "100%",
-    thumbnailWebp: workKyobobookWebp,
-    thumbnailJpg: workKyobobookJpg,
-    description: "교보문고 신입사원 부트캠프 공통과제 과제로, 퍼블리싱 작업을 100% 담당하였습니다.",
-    link: "/portfolio/kyobobook"
   },
   {
     id: "workPortfolio2021",
