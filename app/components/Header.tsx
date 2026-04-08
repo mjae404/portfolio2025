@@ -63,6 +63,7 @@ export default function Header() {
       <div className={styles["header-inner"]}>
         <h1 className={styles["header-title"]}>
           <Link className={styles["header-title-link"]} href="/">MJAEDOT</Link>
+          <span className="blind">minjee kim&apos;s portfolio</span>
         </h1>
         <nav className={styles["header-nav"]}>
           {isSubPage && <GoHome />}

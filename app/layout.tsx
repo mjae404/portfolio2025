@@ -16,6 +16,9 @@ const InterSans = Inter({
 export const metadata: Metadata = {
   title: "Minjee Kim's Portfolio",
   description: "견고한 코드를 작성하는 마크업 개발자 웹 퍼블리셔 김민지의 포트폴리오",
+  alternates: {
+    canonical: "http://2025.mjaedot.com",
+  },
 };
 
 export default function RootLayout({
